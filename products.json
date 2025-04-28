@@ -1,0 +1,102 @@
+[
+  {
+    "id": "google-pixel-9-pro",
+    "name": "Google Pixel 9 Pro",
+    "page": "google-pixel-9-pro.html"
+  },
+  {
+    "id": "google-pixel-8-pro",
+    "name": "Google Pixel 8 Pro",
+    "page": "google-pixel-8-pro.html"
+  },
+  {
+    "id": "acer-nitro-16",
+    "name": "Acer Nitro 16 Gaming Laptop",
+    "page": "gaming-laptop-acer-nitro-16.html"
+  },
+  {
+    "id": "asus-strix-g16",
+    "name": "ASUS Strix G16 Gaming Laptop",
+    "page": "gaming-laptop-asus-strix-g16.html"
+  },
+  {
+    "id": "lenovo-thinkpad-p14",
+    "name": "Lenovo ThinkPad P14 Gen 5",
+    "page": "gaming-laptop-lenovo-think-pad-p14-gen-5.html"
+  },
+  {
+    "id": "msi-raider-16",
+    "name": "MSI Raider 16 Gaming Laptop",
+    "page": "gaming-laptop-msi-raider-16.html"
+  },
+  {
+    "id": "airpods-max",
+    "name": "Apple AirPods Max",
+    "page": "apple-headphones-airpods-max.html"
+  },
+  {
+    "id": "beats-studio-3",
+    "name": "Beats Studio 3",
+    "page": "beats-headphones-studio-3.html"
+  },
+  {
+    "id": "samsung-buds-2-pro",
+    "name": "Samsung Buds 2 Pro",
+    "page": "samsung-headphones-buds-2-pro.html"
+  },
+  {
+    "id": "sony-bravia-kd75x75wl",
+    "name": "Sony Bravia KD75X75WL",
+    "page": "tv-sony-bravia-kd75x75wl.html"
+  },
+  {
+    "id": "sony-bravia-xr",
+    "name": "Sony Bravia XR-83A84L",
+    "page": "tv-sony-bravia-xr-83a84l.html"
+  },
+  {
+    "id": "toshiba-uf3f",
+    "name": "Toshiba UF3F",
+    "page": "tv-toshiba-uf3f.html"
+  },
+  {
+    "id": "panasonic-55z80aey",
+    "name": "Panasonic 55Z80AEY",
+    "page": "tv-panasonic-55z80aey.html"
+  },
+  {
+    "id": "lg",
+    "name": "LG TV",
+    "page": "tv-lg.html"
+  },
+  {
+    "id": "hisense",
+    "name": "Hisense TV",
+    "page": "tv-hisense.html"
+  },
+  {
+    "id": "philips",
+    "name": "Philips TV",
+    "page": "tv-philips.html"
+  },
+  {
+    "id": "html-and-css",
+    "name": "HTML and CSS Book",
+    "page": "book-computing-html-and-css.html"
+  },
+  {
+    "id": "automate-python",
+    "name": "Automate the Boring Stuff with Python",
+    "page": "book-computing-automate-with-python.html"
+  },
+  {
+    "id": "history-egypt",
+    "name": "History of Egypt",
+    "page": "book-history-egypt.html"
+  },
+  {
+    "id": "ww2-history",
+    "name": "History of WW2",
+    "page": "book-history-ww2.html"
+  }
+]

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartphones - Scamazon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div id="cart-icon" class="cart-icon" onclick="toggleCart()">
+    🛒
+    <span id="cart-count">0</span>
+  </div>
+  <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: £0</p>
+    <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+  </div>
+
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Logos/Scamazon-logo.png" alt="Scamazon Logo">
+      </a>
+    </div>    
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="products-landing-page.html" class="dropbtn">Products</a>
+        <div class="dropdown-content">
+          <a href="books.html">Books</a>
+          <a href="headphones-landing-page.html">Headphones</a>
+          <a href="homeandgarden-landing-page.html">Home and Garden</a>
+          <a href="laptops-landing-page.html">Laptops</a>
+          <a href="smartphones-landing-page.html">Smartphones</a>
+          <a href="tvs-landing-page.html">TVs</a>
+          <a href="videogames-landing-page.html">Video Games</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <section id="search-section">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for products...">
+        <button id="search-button">Search</button>
+        <!-- Dropdown for suggestions -->
+        <div id="search-suggestions" class="dropdown-menu" style="display: none;"></div>
+      </div>
+    </section>
+  </nav>
+
+
+  <div id="breadcrumbs"></div>
+
+
+  
+  <!-- Main Content -->
+  <header>
+    <h1>Choose the latest smartphones only at Scamazon!</h1>
+  </header>
+  
+  <main>
+    <section id="games" class="product-grid">
+      <!-- Assassin's Creed Mirage Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-ac-mirage" 
+             src="products/video-games/pc/assassins-creed-mirage/1.jpg" 
+             alt="Assassin's Creed Mirage for PC" 
+             class="clickable" 
+             onclick="openModal('ac-mirage')">
+  
+        <!-- Product Details -->
+        <h3>Assassin's Creed Mirage - PC</h3>
+        <p>£49.99</p>
+        <p>
+          Immerse yourself in the world of Baghdad during the 9th century in "Assassin's Creed Mirage." Experience a story-driven action-adventure with stealth mechanics, an open world, and the rich storytelling of the Assassin's Creed franchise.
+        </p>
+        <button onclick="addToCart('Assassin\'s Creed Mirage - PC', 49.99)">Add to Cart</button>
+      </div>
+    </section>
+  
+    <!-- Modal for Assassin's Creed Mirage -->
+    <div id="modal-ac-mirage" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('ac-mirage')">&times;</span>
+  
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-ac-mirage" 
+             class="modal-main-image" 
+             src="products/video-games/pc/assassins-creed-mirage/1.jpg" 
+             alt="Assassin's Creed Mirage for PC">
+  
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/video-games/pc/assassins-creed-mirage/1.jpg" 
+               alt="Assassin's Creed Mirage Thumbnail 1" 
+               onclick="changeModalImage('products/video-games/pc/assassins-creed-mirage/1.jpg', 'ac-mirage')">
+  
+          <img src="products/video-games/pc/assassins-creed-mirage/2.jpg" 
+               alt="Assassin's Creed Mirage Thumbnail 2" 
+               onclick="changeModalImage('products/video-games/pc/assassins-creed-mirage/2.jpg', 'ac-mirage')">
+  
+          <img src="products/video-games/pc/assassins-creed-mirage/3.jpg" 
+               alt="Assassin's Creed Mirage Thumbnail 3" 
+               onclick="changeModalImage('products/games/ac-mirage/screenshot3.jpg', 'ac-mirage')">
+        </div>
+  
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Platform: PC</li>
+          <li>Genre: Action-Adventure, Stealth</li>
+          <li>Release Date: October 12, 2023</li>
+          <li>Developer: Ubisoft</li>
+          <li>Publisher: Ubisoft</li>
+          <li>Minimum Requirements:
+            <ul>
+              <li>OS: Windows 10 (64-bit)</li>
+              <li>Processor: Intel Core i5-4460 or AMD Ryzen 5 1400</li>
+              <li>RAM: 8 GB</li>
+              <li>Graphics: NVIDIA GeForce GTX 960 or AMD Radeon R9 380</li>
+              <li>Storage: 50 GB available space</li>
+            </ul>
+          </li>
+          <li>Recommended Requirements:
+            <ul>
+              <li>OS: Windows 10/11 (64-bit)</li>
+              <li>Processor: Intel Core i7-8700K or AMD Ryzen 7 2700X</li>
+              <li>RAM: 16 GB</li>
+              <li>Graphics: NVIDIA GeForce RTX 2060 or AMD Radeon RX 5700</li>
+              <li>Storage: 50 GB SSD</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+
+     <!-- Cart Section -->
+     <div id="cart" class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Total: £0</p>
+    </div>
+
+
+
+<!-- Loading Screen START-->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+<div id="main-content" style="display: none;"></div>
+<!-- Loading Screen END -->
+ 
+
+  <script src="loading-script.js"></script>
+  <script src="modal.js"></script>
+  <script src="cart.js"></script>
+  <script src="breadcrumbs.js"></script>
+  <script src="search.js"></script>
+  
+</body>
+</html>

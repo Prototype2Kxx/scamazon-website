@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beats - Headphones - Scamazon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div id="cart-icon" class="cart-icon" onclick="toggleCart()">
+    🛒
+    <span id="cart-count">0</span>
+  </div>
+  <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: £0</p>
+    <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+  </div>
+
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Logos/Scamazon-logo.png" alt="Scamazon Logo">
+      </a>
+    </div>    
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="products-landing-page.html" class="dropbtn">Products</a>
+        <div class="dropdown-content">
+          <a href="books.html">Books</a>
+          <a href="headphones-landing-page.html">Headphones</a>
+          <a href="homeandgarden-landing-page.html">Home and Garden</a>
+          <a href="laptops-landing-page.html">Laptops</a>
+          <a href="smartphones-landing-page.html">Smartphones</a>
+          <a href="tvs-landing-page.html">TVs</a>
+          <a href="videogames-landing-page.html">Video Games</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <section id="search-section">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for products...">
+        <button id="search-button">Search</button>
+        <!-- Dropdown for suggestions -->
+        <div id="search-suggestions" class="dropdown-menu" style="display: none;"></div>
+      </div>
+    </section>
+  </nav>
+
+
+
+  <div id="breadcrumbs"></div>
+
+
+
+  
+  <!-- Main Content -->
+  <header>
+    <h1>Choose the latest headphones only at Scamazon!</h1>
+  </header>
+
+
+
+  <main>
+    <section id="headphones" class="product-grid">
+      <!-- Beats Solo 4 Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-beats-solo-4" 
+             src="products/headphones/beats-solo-4/1.jpg" 
+             alt="Beats Solo 4" 
+             class="clickable" 
+             onclick="openModal('beats-solo-4')">
+    
+        <!-- Product Details -->
+        <h3>Beats Solo 4</h3>
+        <p>£99</p>
+        <p>
+          The Beats Solo 4 Wireless headphones offer incredible sound quality with advanced Bluetooth technology. Lightweight, foldable, and featuring up to 40 hours of battery life, they are perfect for everyday use and on-the-go listening.
+        </p>
+        <button onclick="addToCart('Beats Solo 4', 199)">Add to Cart</button>
+      </div>
+    </section>
+    
+    <!-- Modal for Beats Solo 4 -->
+    <div id="modal-beats-solo-4" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('beats-solo-4')">&times;</span>
+    
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-beats-solo-4" 
+             class="modal-main-image" 
+             src="products/headphones/beats-solo-4/1.jpg" 
+             alt="Beats Solo 4">
+    
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/headphones/beats-solo-4/1.jpg" 
+               alt="Beats Solo 4 Thumbnail 1" 
+               onclick="changeModalImage('products/headphones/beats-solo-4/1.jpg', 'beats-solo-4')">
+          <img src="products/headphones/beats-solo-4/2.jpg" 
+               alt="Beats Solo 4 Thumbnail 2" 
+               onclick="changeModalImage('products/headphones/beats-solo-4/2.jpg', 'beats-solo-4')">
+          <img src="products/headphones/beats-solo-4/3.jpg" 
+               alt="Beats Solo 4 Thumbnail 3" 
+               onclick="changeModalImage('products/headphones/beats-solo-4/3.jpg', 'beats-solo-4')">
+        </div>
+    
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Audio: High-quality sound with balanced bass</li>
+          <li>Battery Life: Up to 40 hours</li>
+          <li>Connectivity: Bluetooth and Apple H1 chip</li>
+          <li>Design: Lightweight and foldable for portability</li>
+          <li>Compatibility: Works with Apple and Android devices</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+
+
+
+     <!-- Cart Section -->
+     <div id="cart" class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Total: £0</p>
+    </div>
+
+
+
+<!-- Loading Screen START-->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+<div id="main-content" style="display: none;"></div>
+<!-- Loading Screen END -->
+ 
+
+  <script src="loading-script.js"></script>
+  <script src="modal.js"></script>
+  <script src="cart.js"></script>
+  <script src="breadcrumbs.js"></script>
+  <script src="search.js"></script>
+  
+</body>
+</html>

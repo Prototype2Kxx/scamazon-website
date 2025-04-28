@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Laptops - Scamazon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div id="cart-icon" class="cart-icon" onclick="toggleCart()">
+    🛒
+    <span id="cart-count">0</span>
+  </div>
+  <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: £0</p>
+    <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+  </div>
+  
+  
+
+  
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Logos/Scamazon-logo.png" alt="Scamazon Logo">
+      </a>
+    </div>    
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="products-landing-page.html" class="dropbtn">Products</a>
+        <div class="dropdown-content">
+          <a href="books.html">Books</a>
+          <a href="headphones-landing-page.html">Headphones</a>
+          <a href="homeandgarden-landing-page.html">Home and Garden</a>
+          <a href="laptops-landing-page.html">Laptops</a>
+          <a href="smartphones-landing-page.html">Smartphones</a>
+          <a href="tvs-landing-page.html">TVs</a>
+          <a href="videogames-landing-page.html">Video Games</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <section id="search-section">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for products...">
+        <button id="search-button">Search</button>
+        <!-- Dropdown for suggestions -->
+        <div id="search-suggestions" class="dropdown-menu" style="display: none;"></div>
+      </div>
+    </section>
+  </nav>
+  <!-- Navigation Bar -->
+
+
+
+  <div id="breadcrumbs"></div>
+
+
+
+  <!-- Main Content -->
+  <header>
+    <h1>Gaming Laptops</h1>
+  </header>
+
+  
+  <main>
+    <section id="laptops" class="product-grid">
+      <!-- Lenovo ThinkPad L14 Gen 5 Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-lenovo-think-pad-l14-gen-5" 
+             src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen-5/1.jpg" 
+             alt="Lenovo ThinkPad L14 Gen 5" 
+             class="clickable" 
+             onclick="openModal('lenovo-think-pad-l14-gen-5')">
+  
+        <!-- Product Details -->
+        <h3>Lenovo ThinkPad L14 Gen 5</h3>
+        <p>£1,099</p>
+        <p>
+          The Lenovo ThinkPad L14 Gen 5 is a reliable business laptop known for its durability, excellent keyboard, and enterprise-level security. Ideal for productivity on the go, it offers long battery life and robust performance.
+        </p>
+        <button onclick="addToCart('Lenovo ThinkPad L14 Gen 5', 1099)">Add to Cart</button>
+      </div>
+    </section>
+  
+    <!-- Modal for Lenovo ThinkPad L14 Gen 5 -->
+    <div id="modal-lenovo-think-pad-l14-gen-5" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('lenovo-think-pad-l14-gen-5')">&times;</span>
+  
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-lenovo-think-pad-l14-gen-5" 
+             class="modal-main-image" 
+             src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen-5/1.jpg" 
+             alt="Lenovo ThinkPad L14 Gen 5">
+  
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen-5/1.jpg" 
+               alt="Lenovo ThinkPad L14 Gen 5 Thumbnail 1" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/1.jpg', 'lenovo-think-pad-l14-gen-5')">
+
+          <img src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen-5/2.jpg" 
+               alt="Lenovo ThinkPad L14 Gen 5 Thumbnail 2" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/2.jpg', 'lenovo-think-pad-l14-gen-5')">
+
+          <img src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen-5/3.jpg" 
+               alt="Lenovo ThinkPad L14 Gen 5 Thumbnail 3" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/3.jpg', 'lenovo-think-pad-l14-gen-5')">
+
+          <img src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen-5/4.jpg" 
+               alt="Lenovo ThinkPad L14 Gen 5 Thumbnail 4" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/4.jpg', 'lenovo-think-pad-l14-gen-5')">
+
+          <img src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen-5/5.jpg" 
+               alt="Lenovo ThinkPad L14 Gen 5 Thumbnail 5" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/5.jpg', 'lenovo-think-pad-l14-gen-5')">
+        </div>
+  
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Processor: Intel Core i5-1345U</li>
+          <li>Graphics: Intel Iris Xe Graphics</li>
+          <li>Display: 14-inch Full HD (1920 x 1080), IPS panel</li>
+          <li>Memory: 16GB DDR4 RAM</li>
+          <li>Storage: 512GB PCIe Gen 4 SSD</li>
+          <li>Battery Life: Up to 10 hours</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  
+
+     
+   <!-- Cart Section -->
+   <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: £0</p>
+  </div>
+
+
+
+
+
+
+  <!-- Loading Screen START-->
+  <div id="loading-screen">
+    <div class="loader"></div>
+  </div>
+  <div id="main-content" style="display: none;"></div>
+  <!-- Loading Screen END -->
+
+  <script src="loading-script.js"></script>
+  <script src="modal.js"></script>
+  <script src="cart.js"></script>
+  <script src="breadcrumbs.js"></script>
+  <script src="search.js"></script>
+  
+</body>
+</html>

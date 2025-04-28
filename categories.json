@@ -1,0 +1,133 @@
+[
+  {
+    "keywords": [
+      "laptops",
+      "gaming laptops",
+      "office laptops",
+      "microsoft surface",
+      "macbook",
+      "apple laptops",
+      "windows laptops"
+    ],
+    "page": "laptops-landing-page.html"
+  },
+  {
+    "keywords": [
+      "headphones",
+      "audio",
+      "earphones",
+      "bluetooth headphones",
+      "noise-canceling headphones",
+      "wireless headphones"
+    ],
+    "page": "headphones-landing-page.html"
+  },
+  {
+    "keywords": [
+      "smartphones",
+      "google pixel",
+      "samsung galaxy",
+      "apple iphones",
+      "android phones",
+      "iphone",
+      "mobile phones",
+      "cell phones"
+    ],
+    "page": "smartphones-landing-page.html"
+  },
+  {
+    "keywords": [
+      "books",
+      "history books",
+      "computing books",
+      "fiction books",
+      "non-fiction books",
+      "science books",
+      "novels",
+      "ebooks"
+    ],
+    "page": "books.html"
+  },
+  {
+    "keywords": [
+      "tvs",
+      "televisions",
+      "smart tvs",
+      "4k tvs",
+      "oled tvs",
+      "led tvs",
+      "flat screen tvs",
+      "large tvs"
+    ],
+    "page": "tvs-landing-page.html"
+  },
+  {
+    "keywords": [
+      "about",
+      "about us",
+      "company info",
+      "our story",
+      "who we are",
+      "company history"
+    ],
+    "page": "about.html"
+  },
+  {
+    "keywords": [
+      "contact",
+      "support",
+      "customer service",
+      "help",
+      "contact us",
+      "email support",
+      "phone support"
+    ],
+    "page": "contact.html"
+  },
+  {
+    "keywords": [
+      "video games",
+      "consoles",
+      "pc games",
+      "playstation games",
+      "xbox games",
+      "nintendo games",
+      "gaming consoles"
+    ],
+    "page": "videogames-landing-page.html"
+  },
+  {
+    "keywords": [
+      "hisense tv",
+      "hisense 4k tv",
+      "hisense smart tv"
+    ],
+    "page": "tv-hisense.html"
+  },
+  {
+    "keywords": [
+      "lg tv",
+      "lg oled tv",
+      "lg smart tv"
+    ],
+    "page": "tv-lg.html"
+  },
+  {
+    "keywords": [
+      "samsung tv",
+      "samsung 4k tv",
+      "samsung smart tv",
+      "samsung qled tv"
+    ],
+    "page": "tv-samsung.html"
+  },
+  {
+    "keywords": [
+      "sony tv",
+      "sony bravia",
+      "sony oled tv",
+      "sony smart tv"
+    ],
+    "page": "tv-sony.html"
+  }
+]

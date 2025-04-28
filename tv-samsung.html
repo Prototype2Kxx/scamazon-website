@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartphones - Scamazon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div id="cart-icon" class="cart-icon" onclick="toggleCart()">
+    🛒
+    <span id="cart-count">0</span>
+  </div>
+  <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: £0</p>
+    <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+  </div>
+
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Logos/Scamazon-logo.png" alt="Scamazon Logo">
+      </a>
+    </div>    
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="products-landing-page.html" class="dropbtn">Products</a>
+        <div class="dropdown-content">
+          <a href="books.html">Books</a>
+          <a href="headphones-landing-page.html">Headphones</a>
+          <a href="homeandgarden-landing-page.html">Home and Garden</a>
+          <a href="laptops-landing-page.html">Laptops</a>
+          <a href="smartphones-landing-page.html">Smartphones</a>
+          <a href="tvs-landing-page.html">TVs</a>
+          <a href="videogames-landing-page.html">Video Games</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <section id="search-section">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for products...">
+        <button id="search-button">Search</button>
+        <!-- Dropdown for suggestions -->
+        <div id="search-suggestions" class="dropdown-menu" style="display: none;"></div>
+      </div>
+    </section>
+  </nav>
+
+
+
+  <div id="breadcrumbs"></div>
+
+
+
+
+  <!-- Main Content -->
+  <header>
+    <h1>Choose the latest smartphones only at Scamazon!</h1>
+  </header>
+  
+
+
+
+  <main>
+    <section id="tvs" class="product-grid">
+      <!-- Samsung DU7100 55" Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-samsung-du7100" 
+             src="products/tvs/samsung/samsung-du7100/1.jpg" 
+             alt="Samsung DU7100 55 Inch 4K Ultra HD Smart TV" 
+             class="clickable" 
+             onclick="openModal('samsung-du7100')">
+  
+        <!-- Product Details -->
+        <h3>Samsung DU7100 55" 4K Ultra HD</h3>
+        <p>£599</p>
+        <p>
+          The Samsung DU7100 55" 4K Ultra HD Smart TV offers vivid colors, incredible clarity, and smooth motion for an immersive viewing experience. Powered by Tizen OS, it provides seamless access to your favorite apps and content.
+        </p>
+        <button onclick="addToCart('Samsung DU7100 55&quot; 4K Ultra HD', 599)">Add to Cart</button>
+      </div>
+    </section>
+  
+    <!-- Modal for Samsung DU7100 55" -->
+    <div id="modal-samsung-du7100" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('samsung-du7100')">&times;</span>
+        <h2>Samsung DU7100 55" 4K Ultra HD</h2>
+        <p>Experience stunning 4K resolution and Smart TV capabilities with the Samsung DU7100 55".</p>
+  
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-samsung-du7100" 
+             class="modal-main-image" 
+             src="products/tvs/samsung/samsung-du7100/1.jpg" 
+             alt="Samsung DU7100 55 Inch 4K Ultra HD Smart TV">
+  
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/tvs/samsung/samsung-du7100/1.jpg" 
+               alt="Samsung DU7100 Thumbnail 1" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-du7100/1.jpg', 'samsung-du7100')">
+  
+          <img src="products/tvs/samsung/samsung-du7100/2.jpg" 
+               alt="Samsung DU7100 Thumbnail 2" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-du7100/2.jpg', 'samsung-du7100')">
+  
+          <img src="products/tvs/samsung/samsung-du7100/3.jpg" 
+               alt="Samsung DU7100 Thumbnail 3" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-du7100/3.jpg', 'samsung-du7100')">
+  
+          <img src="products/tvs/samsung/samsung-du7100/4.jpg" 
+               alt="Samsung DU7100 Thumbnail 4" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-du7100/4.jpg', 'samsung-du7100')">
+  
+          <img src="products/tvs/samsung/samsung-du7100/5.jpg" 
+               alt="Samsung DU7100 Thumbnail 5" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-du7100/5.jpg', 'samsung-du7100')">
+  
+          <img src="products/tvs/samsung/samsung-du7100/6.jpg" 
+               alt="Samsung DU7100 Thumbnail 6" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-du7100/6.jpg', 'samsung-du7100')">
+        </div>
+  
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Screen Size: 55 Inches</li>
+          <li>Resolution: 4K Ultra HD (3840 x 2160)</li>
+          <li>Display Technology: LED</li>
+          <li>Smart TV Platform: Tizen OS</li>
+          <li>HDR Support: HDR10, HLG</li>
+          <li>Ports: HDMI x 3, USB x 2</li>
+          <li>Audio: Dolby Digital Plus</li>
+          <li>Energy Rating: A+</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+
+
+  <main>
+    <section id="tvs" class="product-grid">
+      <!-- Samsung Q60D 65" Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-samsung-q60d" 
+             src="products/tvs/samsung/samsung-q60dqled/1.jpg" 
+             alt="Samsung Q60D 65 Inch QLED 4K Smart TV" 
+             class="clickable" 
+             onclick="openModal('samsung-q60d')">
+  
+        <!-- Product Details -->
+        <h3>Samsung Q60D 65" QLED 4K</h3>
+        <p>£799</p>
+        <p>
+          The Samsung Q60D 65" QLED 4K Smart TV combines Quantum Dot technology, HDR10+, and dual LED backlighting to deliver stunning visuals. Perfect for streaming, gaming, and immersive viewing experiences with Tizen OS and Smart Hub.
+        </p>
+        <button onclick="addToCart('Samsung Q60D 65&quot; QLED 4K', 799)">Add to Cart</button>
+      </div>
+    </section>
+  
+    <!-- Modal for Samsung Q60D 65" -->
+    <div id="modal-samsung-q60d" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('samsung-q60d')">&times;</span>
+        <h2>Samsung Q60D 65" QLED 4K</h2>
+        <p>Experience stunning 4K resolution and Smart TV capabilities with the Samsung Q60D 65".</p>
+  
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-samsung-q60d" 
+             class="modal-main-image" 
+             src="products/tvs/samsung/samsung-q60dqled/1.jpg" 
+             alt="Samsung Q60D 65 Inch QLED 4K Smart TV">
+  
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/tvs/samsung/samsung-q60dqled/1.jpg" 
+               alt="Samsung Q60D Thumbnail 1" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-q60dqled/1.jpg', 'samsung-q60d')">
+  
+          <img src="products/tvs/samsung/samsung-q60dqled/2.jpg" 
+               alt="Samsung Q60D Thumbnail 2" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-q60dqled/2.jpg', 'samsung-q60d')">
+  
+          <img src="products/tvs/samsung/samsung-q60dqled/3.jpg" 
+               alt="Samsung Q60D Thumbnail 3" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-q60dqled/3.jpg', 'samsung-q60d')">
+  
+          <img src="products/tvs/samsung/samsung-q60dqled/4.jpg" 
+               alt="Samsung Q60D Thumbnail 4" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-q60dqled/4.jpg', 'samsung-q60d')">
+  
+          <img src="products/tvs/samsung/samsung-q60dqled/5.jpg" 
+               alt="Samsung Q60D Thumbnail 5" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-q60dqled/5.jpg', 'samsung-q60d')">
+  
+          <img src="products/tvs/samsung/samsung-q60dqled/6.jpg" 
+               alt="Samsung Q60D Thumbnail 6" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-q60dqled/6.jpg', 'samsung-q60d')">
+        </div>
+  
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Screen Size: 65 Inches</li>
+          <li>Resolution: 4K Ultra HD (3840 x 2160)</li>
+          <li>Display Technology: QLED with Quantum Dot</li>
+          <li>Smart TV Platform: Tizen OS</li>
+          <li>HDR Support: HDR10+, HLG</li>
+          <li>Ports: HDMI x 3, USB x 2</li>
+          <li>Audio: Dolby Digital Plus with Adaptive Sound</li>
+          <li>Energy Rating: A</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+
+
+
+  <main>
+    <section id="tvs" class="product-grid">
+      <!-- Samsung QN85D 55" Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-samsung-qn85d" 
+             src="products/tvs/samsung/samsung-qn85d/1.jpg" 
+             alt="Samsung QN85D 55 Inch Neo QLED 4K Smart TV" 
+             class="clickable" 
+             onclick="openModal('samsung-qn85d')">
+  
+        <!-- Product Details -->
+        <h3>Samsung QN85D 55" Neo QLED 4K</h3>
+        <p>£1,299</p>
+        <p>
+          The Samsung QN85D 55" Neo QLED 4K Smart TV delivers exceptional brightness and detail with Mini LED technology. Featuring Quantum HDR, Object Tracking Sound, and the intuitive Tizen OS for seamless access to your favorite streaming services.
+        </p>
+        <button onclick="addToCart('Samsung QN85D 55&quot; Neo QLED 4K', 1299)">Add to Cart</button>
+      </div>
+    </section>
+  
+    <!-- Modal for Samsung QN85D 55" -->
+    <div id="modal-samsung-qn85d" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('samsung-qn85d')">&times;</span>
+        <h2>Samsung QN85D 55" Neo QLED 4K</h2>
+        <p>Experience ultra-precise backlighting and stunning 4K clarity with the Samsung QN85D 55" Neo QLED Smart TV.</p>
+  
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-samsung-qn85d" 
+             class="modal-main-image" 
+             src="products/tvs/samsung/samsung-qn85d/1.jpg" 
+             alt="Samsung QN85D 55 Inch Neo QLED 4K Smart TV">
+  
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/tvs/samsung/samsung-qn85d/1.jpg" 
+               alt="Samsung QN85D Thumbnail 1" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-qn85d/1.jpg', 'samsung-qn85d')">
+  
+          <img src="products/tvs/samsung/samsung-qn85d/2.jpg" 
+               alt="Samsung QN85D Thumbnail 2" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-qn85d/2.jpg', 'samsung-qn85d')">
+  
+          <img src="products/tvs/samsung/samsung-qn85d/3.jpg" 
+               alt="Samsung QN85D Thumbnail 3" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-qn85d/3.jpg', 'samsung-qn85d')">
+  
+          <img src="products/tvs/samsung/samsung-qn85d/4.jpg" 
+               alt="Samsung QN85D Thumbnail 4" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-qn85d/4.jpg', 'samsung-qn85d')">
+  
+          <img src="products/tvs/samsung/samsung-qn85d/5.jpg" 
+               alt="Samsung QN85D Thumbnail 5" 
+               onclick="changeModalImage('products/tvs/samsung/samsung-qn85d/5.jpg', 'samsung-qn85d')">
+        </div>
+  
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Screen Size: 55 Inches</li>
+          <li>Resolution: 4K Ultra HD (3840 x 2160)</li>
+          <li>Display Technology: Neo QLED with Mini LED</li>
+          <li>Smart TV Platform: Tizen OS</li>
+          <li>HDR Support: Quantum HDR, HDR10+, HLG</li>
+          <li>Ports: HDMI x 4, USB x 2</li>
+          <li>Audio: Object Tracking Sound with Dolby Atmos</li>
+          <li>Energy Rating: A+</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+
+
+  
+     <!-- Cart Section -->
+     <div id="cart" class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Total: £0</p>
+    </div>
+
+
+
+<!-- Loading Screen START-->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+<div id="main-content" style="display: none;"></div>
+<!-- Loading Screen END -->
+ 
+
+  <script src="loading-script.js"></script>
+  <script src="modal.js"></script>
+  <script src="cart.js"></script>
+  <script src="breadcrumbs.js"></script>
+  <script src="search.js"></script>
+  
+</body>
+</html>

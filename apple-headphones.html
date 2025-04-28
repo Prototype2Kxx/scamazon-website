@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple - Headphones - Scamazon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div id="cart-icon" class="cart-icon" onclick="toggleCart()">
+    🛒
+    <span id="cart-count">0</span>
+  </div>
+  <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: £0</p>
+    <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+  </div>
+
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Logos/Scamazon-logo.png" alt="Scamazon Logo">
+      </a>
+    </div>    
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="products-landing-page.html" class="dropbtn">Products</a>
+        <div class="dropdown-content">
+          <a href="books.html">Books</a>
+          <a href="headphones-landing-page.html">Headphones</a>
+          <a href="homeandgarden-landing-page.html">Home and Garden</a>
+          <a href="laptops-landing-page.html">Laptops</a>
+          <a href="smartphones-landing-page.html">Smartphones</a>
+          <a href="tvs-landing-page.html">TVs</a>
+          <a href="videogames-landing-page.html">Video Games</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <section id="search-section">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for products...">
+        <button id="search-button">Search</button>
+        <!-- Dropdown for suggestions -->
+        <div id="search-suggestions" class="dropdown-menu" style="display: none;"></div>
+      </div>
+    </section>
+  </nav>
+
+
+  <div id="breadcrumbs"></div>
+
+
+
+  <!-- Main Content -->
+  <header>
+    <h1>Shop Apple Headphones on Scamazon!</h1>
+  </header>
+
+
+  <main>
+    <section id="headphones" class="product-grid">
+      <!-- Apple AirPods Max Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-airpods-max" 
+             src="products/headphones/apple-air-pods-max/1.jpg" 
+             alt="Apple AirPods Max" 
+             class="clickable" 
+             onclick="openModal('airpods-max')">
+  
+        <!-- Product Details -->
+        <h3>Apple AirPods Max</h3>
+        <p>£549</p>
+        <p>
+          The Apple AirPods Max redefine over-ear headphones with their high-fidelity audio, active noise cancellation, spatial audio, and premium design. Experience immersive sound like never before.
+        </p>
+        <button onclick="addToCart('Apple AirPods Max', 549)">Add to Cart</button>
+      </div>
+    </section>
+  
+    <!-- Modal for Apple AirPods Max -->
+    <div id="modal-airpods-max" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('airpods-max')">&times;</span>
+  
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-airpods-max" 
+             class="modal-main-image" 
+             src="products/headphones/apple-air-pods-max/1.jpg" 
+             alt="Apple AirPods Max">
+  
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/headphones/apple-air-pods-max/1.jpg" 
+               alt="AirPods Max Thumbnail 1" 
+               onclick="changeModalImage('products/headphones/apple-air-pods-max/1.jpg', 'airpods-max')">
+          <img src="products/headphones/apple-air-pods-max/2.jpg" 
+               alt="AirPods Max Thumbnail 2" 
+               onclick="changeModalImage('products/headphones/apple-air-pods-max/2.jpg', 'airpods-max')">
+        </div>
+  
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Audio: High-fidelity audio with spatial audio</li>
+          <li>Noise Cancellation: Active Noise Cancellation and Transparency mode</li>
+          <li>Design: Premium anodized aluminum and memory foam ear cushions</li>
+          <li>Battery Life: Up to 20 hours of listening with ANC</li>
+          <li>Connectivity: Bluetooth 5.0</li>
+          <li>Compatibility: Works seamlessly with Apple devices</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+
+  <main>
+    <section id="headphones" class="product-grid">
+      <!-- Apple AirPods Pro 2 Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-airpods-pro-2" 
+             src="products/headphones/apple-air-pods-pro-2/1.jpg" 
+             alt="Apple AirPods Pro 2" 
+             class="clickable" 
+             onclick="openModal('airpods-pro-2')">
+    
+        <!-- Product Details -->
+        <h3>Apple AirPods Pro 2</h3>
+        <p>£249</p>
+        <p>
+          The Apple AirPods Pro 2 deliver enhanced sound quality, advanced noise cancellation, and a more immersive listening experience. Enjoy seamless connectivity with Apple devices and up to 6 hours of battery life on a single charge.
+        </p>
+        <button onclick="addToCart('Apple AirPods Pro 2', 249)">Add to Cart</button>
+      </div>
+    </section>
+    
+    <!-- Modal for Apple AirPods Pro 2 -->
+    <div id="modal-airpods-pro-2" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('airpods-pro-2')">&times;</span>
+    
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-airpods-pro-2" 
+             class="modal-main-image" 
+             src="products/headphones/apple-air-pods-pro-2/1.jpg" 
+             alt="Apple AirPods Pro 2">
+    
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/headphones/apple-air-pods-pro-2/1.jpg" 
+               alt="AirPods Pro 2 Thumbnail 1" 
+               onclick="changeModalImage('products/headphones/apple-air-pods-pro-2/1.jpg', 'airpods-pro-2')">
+          <img src="products/headphones/apple-air-pods-pro-2/2.jpg" 
+               alt="AirPods Pro 2 Thumbnail 2" 
+               onclick="changeModalImage('products/headphones/apple-air-pods-pro-2/2.jpg', 'airpods-pro-2')">
+          <img src="products/headphones/apple-air-pods-pro-2/3.jpg" 
+               alt="AirPods Pro 2 Thumbnail 3" 
+               onclick="changeModalImage('products/headphones/apple-air-pods-pro-2/3.jpg', 'airpods-pro-2')">
+               <img src="products/headphones/apple-air-pods-pro-2/4.jpg" 
+               alt="AirPods Pro 2 Thumbnail 3" 
+               onclick="changeModalImage('products/headphones/apple-air-pods-pro-2/4.jpg', 'airpods-pro-2')">
+               <img src="products/headphones/apple-air-pods-pro-2/5.jpg" 
+               alt="AirPods Pro 2 Thumbnail 3" 
+               onclick="changeModalImage('products/headphones/apple-air-pods-pro-2/5.jpg', 'airpods-pro-2')">
+               <img src="products/headphones/apple-air-pods-pro-2/6.jpg" 
+               alt="AirPods Pro 2 Thumbnail 3" 
+               onclick="changeModalImage('products/headphones/apple-air-pods-pro-2/6.jpg', 'airpods-pro-2')">
+        </div>
+    
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Audio: Personalized spatial audio with adaptive EQ</li>
+          <li>Noise Cancellation: Advanced Active Noise Cancellation and Transparency mode</li>
+          <li>Design: In-ear with customizable silicone tips</li>
+          <li>Battery Life: Up to 6 hours of listening with ANC, 30 hours with case</li>
+          <li>Connectivity: Bluetooth 5.3</li>
+          <li>Compatibility: Works seamlessly with Apple devices</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+     <!-- Cart Section -->
+     <div id="cart" class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Total: £0</p>
+    </div>
+
+
+
+<!-- Loading Screen START-->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+<div id="main-content" style="display: none;"></div>
+<!-- Loading Screen END -->
+ 
+
+  <script src="loading-script.js"></script>
+  <script src="modal.js"></script>
+  <script src="cart.js"></script>
+  <script src="breadcrumbs.js"></script>
+  <script src="search.js"></script>
+  
+</body>
+</html>

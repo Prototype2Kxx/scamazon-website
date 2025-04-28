@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Office & Multimedia Laptops - Scamazon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div id="cart-icon" class="cart-icon" onclick="toggleCart()">
+    🛒
+    <span id="cart-count">0</span>
+  </div>
+  <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: £0</p>
+    <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+  </div>
+
+
+ <!-- NAVIGATION BAR -->
+ <nav>
+  <div class="logo">
+    <a href="index.html">
+      <img src="Logos/Scamazon-logo.png" alt="Scamazon Logo">
+    </a>
+  </div>    
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="products-landing-page.html" class="dropbtn">Products</a>
+      <div class="dropdown-content">
+        <a href="books.html">Books</a>
+        <a href="headphones-landing-page.html">Headphones</a>
+        <a href="homeandgarden-landing-page.html">Home and Garden</a>
+        <a href="laptops-landing-page.html">Laptops</a>
+        <a href="smartphones-landing-page.html">Smartphones</a>
+        <a href="tvs-landing-page.html">TVs</a>
+        <a href="videogames-landing-page.html">Video Games</a>
+      </div>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <section id="search-section">
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search for products...">
+      <button id="search-button">Search</button>
+      <!-- Dropdown for suggestions -->
+      <div id="search-suggestions" class="dropdown-menu" style="display: none;"></div>
+    </div>
+  </section>
+</nav>
+<!-- Navigation Bar -->
+
+
+
+<div id="breadcrumbs"></div>
+
+
+
+
+  <!-- Main Content -->
+  <header>
+    <h1>Office & Multimedia Laptops</h1>
+  </header>
+
+
+  <main>
+  <section id="laptops" class="product-grid">
+    <!-- Microsoft Surface Pro Product -->
+    <div class="product">
+      <!-- Main Image -->
+      <img id="main-image-surface-pro" 
+           src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/1.jpg" 
+           alt="Microsoft Surface Pro" 
+           class="clickable" 
+           onclick="openModal('surface-pro')">
+
+      <!-- Product Details -->
+      <h3>Microsoft Surface Pro</h3>
+      <p>£1,199</p>
+      <p>
+        The Microsoft Surface Pro is a versatile 2-in-1 laptop that combines portability and power. With a sleek design, a responsive touchscreen, and a detachable keyboard, it’s perfect for work and creativity on the go.
+      </p>
+      <button onclick="addToCart('Microsoft Surface Pro', 1199)">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Modal for Microsoft Surface Pro -->
+<div id="modal-surface-pro" class="modal">
+  <div class="modal-content">
+    <!-- Close Button -->
+    <span class="close" onclick="closeModal('surface-pro')">&times;</span>
+
+    <!-- Modal Main Image -->
+    <img id="modal-main-image-surface-pro" 
+         src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/1.jpg" 
+         alt="Microsoft Surface Pro">
+
+    <!-- Thumbnails for Gallery -->
+    <div class="thumbnails">
+      <img src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/1.jpg" 
+           alt="Surface Pro Thumbnail 1" 
+           onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/1.jpg', 'surface-pro')">
+
+      <img src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/2.jpg" 
+           alt="Surface Pro Thumbnail 2" 
+           onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/2.jpg', 'surface-pro')">
+
+      <img src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/3.jpg" 
+           alt="Surface Pro Thumbnail 3" 
+           onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/3.jpg', 'surface-pro')">
+
+      <img src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/4.jpg" 
+           alt="Surface Pro Thumbnail 4" 
+           onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/4.jpg', 'surface-pro')">
+
+      <img src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/5.jpg" 
+           alt="Surface Pro Thumbnail 5" 
+           onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/5.jpg', 'surface-pro')">
+
+      <img src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/6.jpg" 
+           alt="Surface Pro Thumbnail 6" 
+           onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/6.jpg', 'surface-pro')">
+
+      <img src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/7.jpg" 
+           alt="Surface Pro Thumbnail 7" 
+           onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/7.jpg', 'surface-pro')">
+
+      <img src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/8.jpg" 
+           alt="Surface Pro Thumbnail 8" 
+           onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/8.jpg', 'surface-pro')">
+
+      <img src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/9.jpg" 
+           alt="Surface Pro Thumbnail 9" 
+           onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/9.jpg', 'surface-pro')">
+    </div>
+
+    <!-- Specifications -->
+    <h3>Specifications:</h3>
+    <ul>
+      <li>Processor: Intel Core i7</li>
+      <li>Graphics: Intel Iris Xe Graphics</li>
+      <li>Display: 12.3-inch PixelSense touchscreen (2736 x 1824)</li>
+      <li>Memory: 16GB LPDDR4x RAM</li>
+      <li>Storage: 512GB SSD</li>
+      <li>Battery Life: Up to 13.5 hours</li>
+    </ul>
+  </div>
+</div>
+</main>
+
+  
+
+<main>
+  <section id="laptops" class="product-grid">
+    <!-- Apple 2023 MacBook Air Product -->
+    <div class="product">
+      <!-- Main Image -->
+      <img id="main-image-macbook-air" 
+           src="products/laptops/office-and-multimedia-laptops/apple-macbook-air-2023/1.jpg" 
+           alt="Apple MacBook Air 2023" 
+           class="clickable" 
+           onclick="openModal('macbook-air')">
+
+      <!-- Product Details -->
+      <h3>Apple 2023 MacBook Air 15.3-inch</h3>
+      <p>£1,499</p>
+      <p>
+        The 2023 Apple MacBook Air redefines thin and light with its sleek, fanless design. Powered by the M2 chip, it delivers exceptional performance and efficiency, featuring a stunning 15.3-inch Liquid Retina display with vibrant colors and true-to-life details.
+      </p>
+      <button onclick="addToCart('Apple MacBook Air 2023', 1499)">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Modal for Apple MacBook Air -->
+  <div id="modal-macbook-air" class="modal">
+    <div class="modal-content">
+      <!-- Close Button -->
+      <span class="close" onclick="closeModal('macbook-air')">&times;</span>
+
+      <!-- Modal Main Image -->
+      <img id="modal-main-image-macbook-air" 
+           src="products/laptops/office-and-multimedia-laptops/apple-macbook-air-2023/1.jpg" 
+           alt="Apple MacBook Air 2023">
+
+      <!-- Thumbnails for Gallery -->
+      <div class="thumbnails">
+        <img src="products/laptops/office-and-multimedia-laptops/apple-macbook-air-2023/1.jpg" 
+             alt="MacBook Air Thumbnail 1" 
+             onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/apple-macbook-air-2023/1.jpg', 'macbook-air')">
+
+        <img src="products/laptops/office-and-multimedia-laptops/apple-macbook-air-2023/2.jpg" 
+             alt="MacBook Air Thumbnail 2" 
+             onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/apple-macbook-air-2023/2.jpg', 'macbook-air')">
+
+        <img src="products/laptops/office-and-multimedia-laptops/apple-macbook-air-2023/3.jpg" 
+             alt="MacBook Air Thumbnail 3" 
+             onclick="changeModalImage('products/laptops/office-and-multimedia-laptops/apple-macbook-air-2023/3.jpg', 'macbook-air')">
+
+      </div>
+
+      <!-- Specifications -->
+      <h3>Specifications:</h3>
+      <ul>
+        <li>Processor: Apple M2 Chip (8-core CPU, 10-core GPU)</li>
+        <li>Graphics: Integrated Apple GPU</li>
+        <li>Display: 15.3-inch Liquid Retina (2880 x 1864)</li>
+        <li>Memory: 16GB Unified Memory</li>
+        <li>Storage: 512GB SSD</li>
+        <li>Battery Life: Up to 18 hours</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+
+
+     <!-- Cart Section -->
+     <div id="cart" class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Total: £0</p>
+    </div>
+
+
+<!-- Loading Screen START-->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+<div id="main-content" style="display: none;"></div>
+<!-- Loading Screen END -->
+ 
+
+  <script src="loading-script.js"></script>
+  <script src="modal.js"></script>
+  <script src="cart.js"></script>
+  <script src="breadcrumbs.js"></script>
+  <script src="search.js"></script>
+  
+</body>
+</html>

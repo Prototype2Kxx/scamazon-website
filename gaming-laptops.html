@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Laptops - Scamazon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div id="cart-icon" class="cart-icon" onclick="toggleCart()">
+    🛒
+    <span id="cart-count">0</span>
+  </div>
+  <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: £0</p>
+    <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+  </div>
+  
+  
+
+  
+
+ <!-- NAVIGATION BAR -->
+ <nav>
+  <div class="logo">
+    <a href="index.html">
+      <img src="Logos/Scamazon-logo.png" alt="Scamazon Logo">
+    </a>
+  </div>    
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="products-landing-page.html" class="dropbtn">Products</a>
+      <div class="dropdown-content">
+        <a href="books.html">Books</a>
+        <a href="headphones-landing-page.html">Headphones</a>
+        <a href="homeandgarden-landing-page.html">Home and Garden</a>
+        <a href="laptops-landing-page.html">Laptops</a>
+        <a href="smartphones-landing-page.html">Smartphones</a>
+        <a href="tvs-landing-page.html">TVs</a>
+        <a href="videogames-landing-page.html">Video Games</a>
+      </div>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <section id="search-section">
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search for products...">
+      <button id="search-button">Search</button>
+      <!-- Dropdown for suggestions -->
+      <div id="search-suggestions" class="dropdown-menu" style="display: none;"></div>
+    </div>
+  </section>
+</nav>
+  <!-- Navigation Bar -->
+
+
+
+  <div id="breadcrumbs"></div>
+
+
+
+  <!-- Main Content -->
+  <header>
+    <h1>Gaming Laptops</h1>
+  </header>
+
+  
+  <main>
+    <section id="laptops" class="product-grid">
+      <!-- Acer Nitro 16 Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-acer-nitro-16" 
+             src="products/laptops/gaming-laptops/acer-nitro-16/1.jpg" 
+             alt="Acer Nitro 16" 
+             class="clickable" 
+             onclick="openModal('acer-nitro-16')">
+  
+        <!-- Product Details -->
+        <h3>Acer Nitro 16</h3>
+        <p>£1,299</p>
+        <p>
+          The Acer Nitro 16 is a budget-friendly gaming laptop that offers solid performance for 1080p gaming. It features a high-refresh-rate display 
+          and a comfortable keyboard with RGB backlighting.
+        </p>
+        <button onclick="addToCart('Acer Nitro 16', 1299)">Add to Cart</button>
+      </div>
+    </section>
+  
+    <!-- Modal for Acer Nitro 16 -->
+    <div id="modal-acer-nitro-16" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('acer-nitro-16')">&times;</span>
+  
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-acer-nitro-16" 
+             class="modal-main-image" 
+             src="products/laptops/gaming-laptops/acer-nitro-16/1.jpg" 
+             alt="Acer Nitro 16">
+  
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/laptops/gaming-laptops/acer-nitro-16/1.jpg" 
+               alt="Acer Nitro 16 Thumbnail 1" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/acer-nitro-16/1.jpg', 'acer-nitro-16')">
+          <img src="products/laptops/gaming-laptops/acer-nitro-16/2.jpg" 
+               alt="Acer Nitro 16 Thumbnail 2" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/acer-nitro-16/2.jpg', 'acer-nitro-16')">
+          <img src="products/laptops/gaming-laptops/acer-nitro-16/3.jpg" 
+               alt="Acer Nitro 16 Thumbnail 3" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/acer-nitro-16/3.jpg', 'acer-nitro-16')">
+          <img src="products/laptops/gaming-laptops/acer-nitro-16/4.jpg" 
+               alt="Acer Nitro 16 Thumbnail 4" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/acer-nitro-16/4.jpg', 'acer-nitro-16')">
+          <img src="products/laptops/gaming-laptops/acer-nitro-16/5.jpg" 
+               alt="Acer Nitro 16 Thumbnail 5" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/acer-nitro-16/5.jpg', 'acer-nitro-16')">
+        </div>
+  
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Processor: AMD Ryzen 5 7640HS</li>
+          <li>Graphics: NVIDIA GeForce RTX 4050 (6GB GDDR6)</li>
+          <li>Display: 16-inch WUXGA (1920 x 1200), 165Hz IPS panel</li>
+          <li>Memory: 16GB DDR5 RAM</li>
+          <li>Storage: 512GB PCIe Gen 4 SSD</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  
+
+  <main>
+    <section id="laptops" class="product-grid">
+      <!-- Asus ROG Strix G16 Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-asus-rog-strix-g16" 
+             src="products/laptops/gaming-laptops/asus-rog-strix-g16/1.jpg" 
+             alt="Asus ROG Strix G16" 
+             class="clickable" 
+             onclick="openModal('asus-rog-strix-g16')">
+  
+        <!-- Product Details -->
+        <h3>Asus ROG Strix G16</h3>
+        <p>£1,799</p>
+        <p>
+          The Asus ROG Strix G16 is a high-performance gaming laptop designed for competitive gamers. It boasts cutting-edge hardware, a stunning 16-inch display, and advanced cooling technology for peak performance during long gaming sessions.
+        </p>
+        <button onclick="addToCart('Asus ROG Strix G16', 1799)">Add to Cart</button>
+      </div>
+    </section>
+  
+    <!-- Modal for Asus ROG Strix G16 -->
+    <div id="modal-asus-rog-strix-g16" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('asus-rog-strix-g16')">&times;</span>
+  
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-asus-rog-strix-g16" 
+             class="modal-main-image" 
+             src="products/laptops/gaming-laptops/asus-rog-strix-g16/1.jpg" 
+             alt="Asus ROG Strix G16">
+  
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/laptops/gaming-laptops/asus-rog-strix-g16/1.jpg" 
+               alt="Asus ROG Strix G16 Thumbnail 1" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/asus-rog-strix-g16/1.jpg', 'asus-rog-strix-g16')">
+          <img src="products/laptops/gaming-laptops/asus-rog-strix-g16/2.jpg" 
+               alt="Asus ROG Strix G16 Thumbnail 2" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/asus-rog-strix-g16/2.jpg', 'asus-rog-strix-g16')">
+          <img src="products/laptops/gaming-laptops/asus-rog-strix-g16/3.jpg" 
+               alt="Asus ROG Strix G16 Thumbnail 3" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/asus-rog-strix-g16/3.jpg', 'asus-rog-strix-g16')">
+          <img src="products/laptops/gaming-laptops/asus-rog-strix-g16/4.jpg" 
+               alt="Asus ROG Strix G16 Thumbnail 4" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/asus-rog-strix-g16/4.jpg', 'asus-rog-strix-g16')">
+          <img src="products/laptops/gaming-laptops/asus-rog-strix-g16/5.jpg" 
+               alt="Asus ROG Strix G16 Thumbnail 5" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/asus-rog-strix-g16/5.jpg', 'asus-rog-strix-g16')">
+        </div>
+  
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Processor: Intel Core i9-13980HX</li>
+          <li>Graphics: NVIDIA GeForce RTX 4070 (8GB GDDR6)</li>
+          <li>Display: 16-inch QHD+ (2560 x 1600), 240Hz IPS panel</li>
+          <li>Memory: 16GB DDR5 RAM</li>
+          <li>Storage: 1TB PCIe Gen 4 SSD</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+
+   
+  <main>
+    <section id="laptops" class="product-grid">
+      <!-- Lenovo ThinkPad L14 Gen 5 Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-lenovo-think-pad-l14-gen-5" 
+             src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/1.jpg" 
+             alt="Lenovo ThinkPad L14 Gen 5" 
+             class="clickable" 
+             onclick="openModal('lenovo-think-pad-l14-gen-5')">
+  
+        <!-- Product Details -->
+        <h3>Lenovo ThinkPad L14 Gen 5</h3>
+        <p>£1,099</p>
+        <p>
+          The Lenovo ThinkPad L14 Gen 5 is a reliable business laptop known for its durability, excellent keyboard, and enterprise-level security. Ideal for productivity on the go, it offers long battery life and robust performance.
+        </p>
+        <button onclick="addToCart('Lenovo ThinkPad L14 Gen 5', 1099)">Add to Cart</button>
+      </div>
+    </section>
+  
+    <!-- Modal for Lenovo ThinkPad L14 Gen 5 -->
+    <div id="modal-lenovo-think-pad-l14-gen-5" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('lenovo-think-pad-l14-gen-5')">&times;</span>
+  
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-lenovo-think-pad-l14-gen-5" 
+             class="modal-main-image" 
+             src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/1.jpg" 
+             alt="Lenovo ThinkPad L14 Gen 5">
+  
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/1.jpg" 
+               alt="Lenovo ThinkPad L14 Gen 5 Thumbnail 1" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/1.jpg', 'lenovo-think-pad-l14-gen-5')">
+
+          <img src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/2.jpg" 
+               alt="Lenovo ThinkPad L14 Gen 5 Thumbnail 2" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/2.jpg', 'lenovo-think-pad-l14-gen-5')">
+
+          <img src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/3.jpg" 
+               alt="Lenovo ThinkPad L14 Gen 5 Thumbnail 3" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/3.jpg', 'lenovo-think-pad-l14-gen-5')">
+
+          <img src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/4.jpg" 
+               alt="Lenovo ThinkPad L14 Gen 5 Thumbnail 4" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/4.jpg', 'lenovo-think-pad-l14-gen-5')">
+
+          <img src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/5.jpg" 
+               alt="Lenovo ThinkPad L14 Gen 5 Thumbnail 5" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/lenovo-think-pad-l14-gen 5/5.jpg', 'lenovo-think-pad-l14-gen-5')">
+        </div>
+  
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Processor: Intel Core i5-1345U</li>
+          <li>Graphics: Intel Iris Xe Graphics</li>
+          <li>Display: 14-inch Full HD (1920 x 1080), IPS panel</li>
+          <li>Memory: 16GB DDR4 RAM</li>
+          <li>Storage: 512GB PCIe Gen 4 SSD</li>
+          <li>Battery Life: Up to 10 hours</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+
+
+  <main>
+    <section id="laptops" class="product-grid">
+      <!-- MSI Raider 16 Product -->
+      <div class="product">
+        <!-- Main Image -->
+        <img id="main-image-msi-raider-16" 
+             src="products/laptops/gaming-laptops/msi-raider-16/1.jpg" 
+             alt="MSI Raider 16" 
+             class="clickable" 
+             onclick="openModal('msi-raider-16')">
+  
+        <!-- Product Details -->
+        <h3>MSI Raider 16</h3>
+        <p>£2,299</p>
+        <p>
+          The MSI Raider 16 is a premium gaming laptop featuring top-tier hardware and a sleek RGB design. With its powerful performance and advanced cooling system, it’s designed for gamers and creators who demand the best.
+        </p>
+        <button onclick="addToCart('MSI Raider 16', 2299)">Add to Cart</button>
+      </div>
+    </section>
+  
+    <!-- Modal for MSI Raider 16 -->
+    <div id="modal-msi-raider-16" class="modal">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close" onclick="closeModal('msi-raider-16')">&times;</span>
+  
+        <!-- Modal Main Image -->
+        <img id="modal-main-image-msi-raider-16" 
+             class="modal-main-image" 
+             src="products/laptops/gaming-laptops/msi-raider-16/1.jpg" 
+             alt="MSI Raider 16">
+  
+        <!-- Thumbnails for Gallery -->
+        <div class="thumbnails">
+          <img src="products/laptops/gaming-laptops/msi-raider-16/1.jpg" 
+               alt="MSI Raider 16 Thumbnail 1" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/msi-raider-16/1.jpg', 'msi-raider-16')">
+          <img src="products/laptops/gaming-laptops/msi-raider-16/2.jpg" 
+               alt="MSI Raider 16 Thumbnail 2" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/msi-raider-16/2.jpg', 'msi-raider-16')">
+          <img src="products/laptops/gaming-laptops/msi-raider-16/3.jpg" 
+               alt="MSI Raider 16 Thumbnail 3" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/msi-raider-16/3.jpg', 'msi-raider-16')">
+          <img src="products/laptops/gaming-laptops/msi-raider-16/4.jpg" 
+               alt="MSI Raider 16 Thumbnail 4" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/msi-raider-16/4.jpg', 'msi-raider-16')">
+          <img src="products/laptops/gaming-laptops/msi-raider-16/5.jpg" 
+               alt="MSI Raider 16 Thumbnail 5" 
+               onclick="changeModalImage('products/laptops/gaming-laptops/msi-raider-16/5.jpg', 'msi-raider-16')">
+        </div>
+  
+        <!-- Specifications -->
+        <h3>Specifications:</h3>
+        <ul>
+          <li>Processor: Intel Core i9-13980HX</li>
+          <li>Graphics: NVIDIA GeForce RTX 4080 (12GB GDDR6)</li>
+          <li>Display: 16-inch QHD+ (2560 x 1600), 240Hz IPS panel</li>
+          <li>Memory: 32GB DDR5 RAM</li>
+          <li>Storage: 1TB PCIe Gen 4 SSD</li>
+          <li>Cooling: Advanced Cooler Boost 5 Technology</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  
+
+  
+   <!-- Cart Section -->
+   <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: £0</p>
+  </div>
+
+
+
+
+
+
+  <!-- Loading Screen START-->
+  <div id="loading-screen">
+    <div class="loader"></div>
+  </div>
+  <div id="main-content" style="display: none;"></div>
+  <!-- Loading Screen END -->
+
+  <script src="loading-script.js"></script>
+  <script src="modal.js"></script>
+  <script src="cart.js"></script>
+  <script src="breadcrumbs.js"></script>
+  <script src="search.js"></script>
+  
+</body>
+</html>

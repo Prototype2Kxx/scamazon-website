@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scamazon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div id="cart-icon" class="cart-icon" onclick="toggleCart()">
+    🛒
+    <span id="cart-count">0</span>
+  </div>
+  <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: £0</p>
+    <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Logos/Scamazon-logo.png" alt="Scamazon Logo">
+      </a>
+    </div>    
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="products-landing-page.html" class="dropbtn">Products</a>
+        <div class="dropdown-content">
+          <a href="books.html">Books</a>
+          <a href="headphones-landing-page.html">Headphones</a>
+          <a href="homeandgarden-landing-page.html">Home and Garden</a>
+          <a href="laptops-landing-page.html">Laptops</a>
+          <a href="smartphones-landing-page.html">Smartphones</a>
+          <a href="tvs-landing-page.html">TVs</a>
+          <a href="videogames-landing-page.html">Video Games</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <section id="search-section">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for products...">
+        <button id="search-button">Search</button>
+        <!-- Dropdown for suggestions -->
+        <div id="search-suggestions" class="dropdown-menu" style="display: none;"></div>
+      </div>
+    </section>
+  </nav>
+
+
+<!-- START OF VIDEO SECTION -->
+  <video controls autoplay loop muted playsinline class="responsive-video">
+    <source src="videos/shopping-video.mov" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<style>
+.responsive-video {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 1920px; /* Full HD max width */
+    max-height: 1080px; /* Full HD max height */
+    object-fit: contain; /* Ensures no cropping */
+    display: block;
+    margin: auto; /* Center the video */
+}
+</style>
+<!-- END OF VIDEO SECTION-->
+
+
+  <!-- Main Content -->
+  <!-- Featured Products -->
+  <section class="featured-products-carousel">
+    <h2>Featured Products</h2>
+    <div class="slider">
+      <button class="prev-btn">&#10094;</button>
+      <div class="slider-container">
+        <div class="slider-track">
+  
+          <div class="product-card">
+            <img src="products/tvs/lg/lg-oled65g45lw/7.jpg" alt="LG OlED 4K TV">
+            <h3>LG OLED TV 65" 4K Ultra HD</h3>
+            <p>£1,999</p>
+            <a href="tv-lg.html" class="btn">View Details</a>
+          </div>
+  
+          <div class="product-card">
+            <img src="products/smartphones/apple-iphone-16-pro-max/1.jpg" alt="Apple iPhone 16 Pro Max">
+            <h3>Apple iPhone 16 Pro Max</h3>
+            <p>£1,299</p>
+            <a href="apple-iphone-16-pro-max.html" class="btn">View Details</a>
+          </div>
+  
+          <div class="product-card">
+            <img src="products/laptops/gaming-laptops/msi-raider-16/1.jpg" alt="MSI Raider 16">
+            <h3>MSI Raider 16</h3>
+            <p>£2,299</p>
+            <a href="gaming-laptop-msi-raider-16.html" class="btn">View Details</a>
+          </div>
+  
+        </div>
+      </div>
+      <button class="next-btn">&#10095;</button>
+    </div>
+  </section>
+  
+
+  
+
+
+
+  <!-- Categories -->
+  <section class="categories">
+    <h2>Shop by Category</h2>
+  
+    <!-- Books Slider -->
+    <div class="category-slider">
+      <h3>Books</h3>
+      <button class="prev-btn" onclick="slideCategory('books', 1)">&#10094;</button>
+      <div class="slider-container">
+        <div class="slider-track" id="books-slider">
+
+          <div class="category-card">
+            <img src="products/books/computing-and-internet/automate-with-python/1.jpg" alt="Harry Potter Book Set">
+            <h4>Automate The Boring Stuff With Python</h4>
+            <a href="book-computing-automate-with-python.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/books/computing-and-internet/html-and-css/1.jpg" alt="Lord of the Rings">
+            <h4>HTML and CSS</h4>
+            <a href="book-computing-html-and-css.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/books/history/ancient-egypt/1.jpg" alt="Lord of the Rings">
+            <h4>Ancient Egypt</h4>
+            <a href="book-history-egypt.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/books/history/wwii-map/1.jpg" alt="Lord of the Rings">
+            <h4>World War II Map</h4>
+            <a href="book-history-ww2.html" class="btn">Shop Now</a>
+          </div>
+
+        </div>
+      </div>
+      <button class="next-btn" onclick="slideCategory('books', -1)">&#10095;</button>
+    </div>
+  
+
+
+        <!-- Headphones Slider -->
+        <div class="category-slider">
+          <h3>Heaphones</h3>
+          <button class="prev-btn" onclick="slideCategory('headphones', 1)">&#10094;</button>
+          <div class="slider-container">
+            <div class="slider-track" id="headphones-slider">
+    
+              <div class="category-card">
+                <img src="products/headphones/apple-air-pods-max/1.jpg" alt="Air Pods Max">
+                <h4>Air Pods Max</h4>
+                <a href="apple-headphones-airpods-max.html" class="btn">Shop Now</a>
+              </div>
+    
+              <div class="category-card">
+                <img src="products/headphones/apple-air-pods-pro-2/1.jpg" alt="Air Pods Pro 2">
+                <h4>Air Pods Pro 2</h4>
+                <a href="apple-headphones-airpods-pro-2.html" class="btn">Shop Now</a>
+              </div>
+    
+              <div class="category-card">
+                <img src="products/headphones/beats-solo-4/1.jpg" alt="Beats Solo 4">
+                <h4>Beats Solo 4</h4>
+                <a href="beats-headphones-solo-4.html" class="btn">Shop Now</a>
+              </div>
+    
+              <div class="category-card">
+                <img src="products/headphones/beats-studio-3/1.jpg" alt="Beats Studio 3">
+                <h4>Beats Studio 3</h4>
+                <a href="beats-headphones-studio-3.html" class="btn">Shop Now</a>
+              </div>
+    
+              <div class="category-card">
+                <img src="products/headphones/samsung-galaxy-buds-2/1.jpg" alt="Galaxy Buds 2">
+                <h4>Galaxy Buds 2</h4>
+                <a href="samsung-headphones-buds-2-pro.html" class="btn">Shop Now</a>
+              </div>
+    
+              <div class="category-card">
+                <img src="products/headphones/samsung-galaxy-buds-3/1.jpg" alt="Galaxy Buds 3">
+                <h4>Galaxy Buds 3</h4>
+                <a href="samsung-headphones-buds-3.html" class="btn">Shop Now</a>
+              </div>
+
+            </div>
+          </div>
+          <button class="next-btn" onclick="slideCategory('headphones', -1)">&#10095;</button>
+        </div>
+
+
+
+
+
+<!-- Laptops Slider -->
+<div class="category-slider">
+  <h3>Laptops</h3>
+  <button class="prev-btn" onclick="slideCategory('laptop', 1)">&#10094;</button>
+  <div class="slider-container">
+    <div class="slider-track" id="laptop-slider">
+
+      <div class="category-card">
+        <img src="products/laptops/gaming-laptops/msi-raider-16/1.jpg" alt="MSI Raider">
+        <h4>MSI Raider 16</h4>
+        <a href="gaming-laptop-msi-raider-16.html" class="btn">Shop Now</a>
+      </div>
+
+      <div class="category-card">
+        <img src="products/laptops/gaming-laptops/acer-nitro-16/1.jpg" alt="Acer Nitro 16">
+        <h4>Acer Nitro 16</h4>
+        <a href="gaming-laptop-acer-nitro-16.html" class="btn">Shop Now</a>
+      </div>
+
+      <div class="category-card">
+        <img src="products/laptops/gaming-laptops/asus-rog-strix-g16/1.jpg" alt="Asus Strix G16">
+        <h4>Asus Strix G16</h4>
+        <a href="gaming-laptop-asus-strix-g16.html" class="btn">Shop Now</a>
+      </div>
+
+      <div class="category-card">
+        <img src="products/laptops/gaming-laptops/lenovo-think-pad-l14-gen-5/1.jpg" alt="Lenovo Think Pad">
+        <h4>Lenovo Think Pad</h4>
+        <a href="gaming-laptop-lenovo-think-pad-l14-gen-5.html" class="btn">Shop Now</a>
+      </div>
+
+      <div class="category-card">
+        <img src="products/laptops/office-and-multimedia-laptops/microsoft-surface-pro/1.jpg" alt="Samsung QLED TV">
+        <h4>Microsoft Surface Pro</h4>
+        <a href="office-multimedia-laptops-microsoft-surface.html" class="btn">Shop Now</a>
+      </div>
+
+      <div class="category-card">
+        <img src="products/laptops/office-and-multimedia-laptops/apple-macbook-air-2023/1.jpg" alt="Samsung QLED TV">
+        <h4>Macbook Air</h4>
+        <a href="office-multimedia-laptops-macbook-air.html" class="btn">Shop Now</a>
+      </div>
+
+    </div>
+  </div>
+  <button class="next-btn" onclick="slideCategory('laptop', -1)">&#10095;</button>
+</div>
+</section>
+
+
+
+    <!-- Smartphones Slider -->
+    <div class="category-slider">
+      <h3>Smartphones</h3>
+      <button class="prev-btn" onclick="slideCategory('smartphones', 1)">&#10094;</button>
+      <div class="slider-container">
+        <div class="slider-track" id="smartphones-slider">
+
+          <div class="category-card">
+            <img src="products/smartphones/apple-iphone-16-pro-max/1.jpg" alt="iPhone 16 Pro Max">
+            <h4>iPhone 16 Pro Max</h4>
+            <a href="apple-iphone-16-pro-max.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/smartphones/samsung-s24-ultra/1.jpg" alt="Samsung Galaxy S24">
+            <h4>Samsung Galaxy S24</h4>
+            <a href="samsung-galaxy-s24-ultra.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/smartphones/google-pixel-9-pro/1.jpg" alt="Google Pixel 9 Pro">
+            <h4>Google Pixel 9 Pro</h4>
+            <a href="google-pixel-9-pro.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/smartphones/apple-iphone-15-pro-max/1.jpg" alt="iPhone 15 Pro Max">
+            <h4>iPhone 15 Pro Max</h4>
+            <a href="apple-iphone-15-pro-max.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/smartphones/samsung-s23-ultra/1.jpg" alt="Samsung Galaxy S23">
+            <h4>Samsung Galaxy S23</h4>
+            <a href="samsung-galaxy-s23-ultra.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/smartphones/google-pixel-8-pro/1.jpg" alt="Google Pixel 8 Pro">
+            <h4>Google Pixel 8 Pro</h4>
+            <a href="google-pixel-8-pro.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/smartphones/apple-iphone-14-pro-max/1.jpg" alt="Iphone 14 Pro Max">
+            <h4>Iphone 14 Pro Max</h4>
+            <a href="apple-iphone-14-pro-max.html" class="btn">Shop Now</a>
+          </div>
+
+        </div>
+      </div>
+      <button class="next-btn" onclick="slideCategory('smartphones', -1)">&#10095;</button>
+    </div>
+  
+
+
+
+    <!-- TVs Slider -->
+    <div class="category-slider">
+      <h3>TVs</h3>
+      <button class="prev-btn" onclick="slideCategory('tvs', 1)">&#10094;</button>
+      <div class="slider-container">
+        <div class="slider-track" id="tvs-slider">
+
+          <div class="category-card">
+            <img src="products/tvs/lg/lg-oled65g45lw/1.jpg" alt="LG OLED TV">
+            <h4>LG OLED TV</h4>
+            <a href="tv-lg.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/tvs/samsung/samsung-q60dqled/1.jpg" alt="Samsung QLED TV">
+            <h4>Samsung QLED TV</h4>
+            <a href="tv-samsung.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/tvs/philips/philips-65oled759/1.jpg" alt="Philips TV">
+            <h4>Philips QLED TV</h4>
+            <a href="tv-philips.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/tvs/hisense/hisense-65e6ntuk/1.jpg" alt="Hisense QLED TV">
+            <h4>Hisense Smart TV</h4>
+            <a href="tv-hisense.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/tvs/toshiba/toshiba-uf3f/1.jpg" alt="Toshiba TV">
+            <h4>Toshiba Smart TV</h4>
+            <a href="tv-toshiba.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/tvs/sony/sony-xr83a84l/1.jpg" alt="Sony TV">
+            <h4>Sony TV</h4>
+            <a href="tv-sony.html" class="btn">Shop Now</a>
+          </div>
+
+          <div class="category-card">
+            <img src="products/tvs/panasonic/65w8aey/1.jpg" alt="Panasonic TV">
+            <h4>Panasonic TV</h4>
+            <a href="tv-panasonic.html" class="btn">Shop Now</a>
+          </div>
+
+        </div>
+      </div>
+      <button class="next-btn" onclick="slideCategory('tvs', -1)">&#10095;</button>
+    </div>
+
+
+
+      <!-- Videogames Slider -->
+      <div class="category-slider">
+        <h3>Books</h3>
+        <button class="prev-btn" onclick="slideCategory('books', 1)">&#10094;</button>
+        <div class="slider-container">
+          <div class="slider-track" id="books-slider">
+  
+            <div class="category-card">
+              <img src="products/video-games/PC/assassins-creed-mirage/1.jpg" alt="Harry Potter Book Set">
+              <h4>Assassin's Creed Mirage PC</h4>
+              <a href="videogames-pc.html" class="btn">Shop Now</a>
+            </div>
+  
+            <div class="category-card">
+              <img src="products/video-games/Playstation/81k4-YXkBHL._AC_SL1500_.jpg" alt="Harry Potter Book Set">
+              <h4>Assassin's Creed Mirage Playstation</h4>
+              <a href="videogames-playstation.html" class="btn">Shop Now</a>
+            </div>
+  
+            <div class="category-card">
+              <img src="products/video-games/Xbox/assassins-creed-mirage/1.jpg" alt="Harry Potter Book Set">
+              <h4>Assassin's Creed Mirage Xbox</h4>
+              <a href="videogames-xbox.html" class="btn">Shop Now</a>
+            </div>
+  
+          </div>
+        </div>
+        <button class="next-btn" onclick="slideCategory('books', -1)">&#10095;</button>
+      </div>
+
+
+
+
+  <!-- Customer Reviews -->
+<section class="reviews">
+  <h2>What Our Customers Say</h2>
+  <div class="review-carousel">
+    <div class="review active">
+      <p>"Scamazon has the best deals! I found everything I needed." - Jane D.</p>
+    </div>
+    <div class="review">
+      <p>"Fast shipping and amazing customer service." - John S.</p>
+    </div>
+    <div class="review">
+      <p>"Even the delivery drivers are so cute OMG." - Bill G.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+     <!-- Cart Section -->
+     <div id="cart" class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Total: £0</p>
+    </div>
+<!-- Cart Section -->
+
+
+  <!-- Loading Screen START -->
+  <div id="loading-screen">
+    <div class="loader"></div>
+  </div>
+  <div id="main-content" style="display: none;"></div>
+  <!-- Loading Screen END -->
+
+
+  <footer class="footer">
+    <ul class="footer-social-icons">
+      <li class="icon-content">
+        <a
+          href="https://linkedin.com/"
+          aria-label="LinkedIn"
+          data-social="linkedin"
+        >
+          <div class="filled"></div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-linkedin"
+            viewBox="0 0 16 16"
+            xml:space="preserve"
+          >
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </a>
+        <div class="tooltip">LinkedIn</div>
+      </li>
+      <li class="icon-content">
+        <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
+          <div class="filled"></div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-github"
+            viewBox="0 0 16 16"
+            xml:space="preserve"
+          >
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </a>
+        <div class="tooltip">GitHub</div>
+      </li>
+      <li class="icon-content">
+        <a
+          href="https://www.instagram.com/"
+          aria-label="Instagram"
+          data-social="instagram"
+        >
+          <div class="filled"></div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-instagram"
+            viewBox="0 0 16 16"
+            xml:space="preserve"
+          >
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </a>
+        <div class="tooltip">Instagram</div>
+      </li>
+  
+      
+
+  <script src="loading-script.js"></script>
+  <script src="cart.js"></script>
+  <script src="search.js"></script>
+  <script src="slider.js"></script>
+  <script src="modal.js"></script>
+  <script src="reviews-carousel.js"></script>
+  <script src="featured-products-carousel.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samsung - Headphones - Scamazon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div id="cart-icon" class="cart-icon" onclick="toggleCart()">
+    🛒
+    <span id="cart-count">0</span>
+  </div>
+  <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: £0</p>
+    <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+  </div>
+
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Logos/Scamazon-logo.png" alt="Scamazon Logo">
+      </a>
+    </div>    
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="products-landing-page.html" class="dropbtn">Products</a>
+        <div class="dropdown-content">
+          <a href="books.html">Books</a>
+          <a href="headphones-landing-page.html">Headphones</a>
+          <a href="homeandgarden-landing-page.html">Home and Garden</a>
+          <a href="laptops-landing-page.html">Laptops</a>
+          <a href="smartphones-landing-page.html">Smartphones</a>
+          <a href="tvs-landing-page.html">TVs</a>
+          <a href="videogames-landing-page.html">Video Games</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <section id="search-section">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for products...">
+        <button id="search-button">Search</button>
+        <!-- Dropdown for suggestions -->
+        <div id="search-suggestions" class="dropdown-menu" style="display: none;"></div>
+      </div>
+    </section>
+  </nav>
+
+
+
+
+  <!-- Main Content -->
+  <header>
+    <h1>Choose the latest headphones only at Scamazon!</h1>
+  </header>
+
+
+
+
+  <div id="breadcrumbs"></div>
+
+
+
+
+ <main>
+  <section id="headphones" class="product-grid">
+    <!-- Samsung Galaxy Buds 3 Product -->
+    <div class="product">
+      <!-- Main Image -->
+      <img id="main-image-galaxy-buds-3" 
+           src="products/headphones/samsung-galaxy-buds-3/1.jpg" 
+           alt="Samsung Galaxy Buds 3" 
+           class="clickable" 
+           onclick="openModal('galaxy-buds-3')">
+  
+      <!-- Product Details -->
+      <h3>Samsung Galaxy Buds 3</h3>
+      <p>£179</p>
+      <p>
+        The Samsung Galaxy Buds 3 deliver studio-quality sound, intelligent Active Noise Cancellation, and a compact design. Enjoy seamless integration with Samsung devices and up to 8 hours of listening time on a single charge.
+      </p>
+      <button onclick="addToCart('Samsung Galaxy Buds 3', 179)">Add to Cart</button>
+    </div>
+  </section>
+  
+  <!-- Modal for Samsung Galaxy Buds 3 -->
+  <div id="modal-galaxy-buds-3" class="modal">
+    <div class="modal-content">
+      <!-- Close Button -->
+      <span class="close" onclick="closeModal('galaxy-buds-3')">&times;</span>
+  
+      <!-- Modal Main Image -->
+      <img id="modal-main-image-galaxy-buds-3" 
+           class="modal-main-image" 
+           src="products/headphones/samsung-galaxy-buds-3/1.jpg" 
+           alt="Samsung Galaxy Buds 3">
+  
+      <!-- Thumbnails for Gallery -->
+      <div class="thumbnails">
+        <img src="products/headphones/samsung-galaxy-buds-3/1.jpg" 
+             alt="Galaxy Buds 3 Thumbnail 1" 
+             onclick="changeModalImage('products/headphones/samsung-galaxy-buds-3/1.jpg', 'galaxy-buds-3')">
+        <img src="products/headphones/samsung-galaxy-buds-3/2.jpg" 
+             alt="Galaxy Buds 3 Thumbnail 2" 
+             onclick="changeModalImage('products/headphones/samsung-galaxy-buds-3/2.jpg', 'galaxy-buds-3')">
+        <img src="products/headphones/samsung-galaxy-buds-3/3.jpg" 
+             alt="Galaxy Buds 3 Thumbnail 3" 
+             onclick="changeModalImage('products/headphones/samsung-galaxy-buds-3/3.jpg', 'galaxy-buds-3')">
+             <img src="products/headphones/samsung-galaxy-buds-3/4.jpg" 
+             alt="Galaxy Buds 3 Thumbnail 3" 
+             onclick="changeModalImage('products/headphones/samsung-galaxy-buds-3/4.jpg', 'galaxy-buds-3')">
+             <img src="products/headphones/samsung-galaxy-buds-3/5.jpg" 
+             alt="Galaxy Buds 3 Thumbnail 3" 
+             onclick="changeModalImage('products/headphones/samsung-galaxy-buds-3/5.jpg', 'galaxy-buds-3')">
+      </div>
+  
+      <!-- Specifications -->
+      <h3>Specifications:</h3>
+      <ul>
+        <li>Audio: Studio-quality sound with advanced equalizer</li>
+        <li>Noise Cancellation: Intelligent Active Noise Cancellation</li>
+        <li>Design: Compact and lightweight in-ear design</li>
+        <li>Battery Life: Up to 8 hours of listening with ANC, 30 hours with case</li>
+        <li>Connectivity: Bluetooth 5.2</li>
+        <li>Compatibility: Works seamlessly with Samsung Galaxy devices</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+
+
+<section id="headphones" class="product-grid">
+  <!-- Samsung Galaxy Buds Pro 2 Product -->
+  <div class="product">
+    <!-- Main Image -->
+    <img id="main-image-galaxy-buds-pro-2" 
+         src="products/headphones/samsung-galaxy-buds-2/1.jpg" 
+         alt="Samsung Galaxy Buds Pro 2" 
+         class="clickable" 
+         onclick="openModal('galaxy-buds-pro-2')">
+
+    <!-- Product Details -->
+    <h3>Samsung Galaxy Buds Pro 2</h3>
+    <p>£179</p>
+    <p>
+      Experience premium sound quality and advanced features with the Samsung Galaxy Buds Pro 2. 
+      These earbuds feature Active Noise Cancellation, 360 Audio, and a comfortable fit, making them perfect for music lovers and professionals alike.
+    </p>
+    <button onclick="addToCart('Samsung Galaxy Buds Pro 2', 179)">Add to Cart</button>
+  </div>
+</section>
+
+<!-- Modal for Samsung Galaxy Buds Pro 2 -->
+<div id="modal-galaxy-buds-pro-2" class="modal">
+  <div class="modal-content">
+    <!-- Close Button -->
+    <span class="close" onclick="closeModal('galaxy-buds-pro-2')">&times;</span>
+
+    <!-- Modal Main Image -->
+    <img id="modal-main-image-galaxy-buds-pro-2" 
+         class="modal-main-image" 
+         src="products/headphones/samsung-galaxy-buds-2/1.jpg" 
+         alt="Samsung Galaxy Buds Pro 2">
+
+    <!-- Thumbnails for Gallery -->
+    <div class="thumbnails">
+      <img src="products/headphones/samsung-galaxy-buds-2/1.jpg" 
+           alt="Galaxy Buds Pro 2 Thumbnail 1" 
+           onclick="changeModalImage('products/headphones/samsung-galaxy-buds-2/1.jpg', 'galaxy-buds-pro-2')">
+
+      <img src="products/headphones/samsung-galaxy-buds-2/2.jpg" 
+           alt="Galaxy Buds Pro 2 Thumbnail 2" 
+           onclick="changeModalImage('products/headphones/samsung-galaxy-buds-2/2.jpg', 'galaxy-buds-pro-2')">
+
+      <img src="products/headphones/samsung-galaxy-buds-2/3.jpg" 
+           alt="Galaxy Buds Pro 2 Thumbnail 3" 
+           onclick="changeModalImage('products/headphones/samsung-galaxy-buds-2/3.jpg', 'galaxy-buds-pro-2')">
+    </div>
+
+    <!-- Specifications -->
+    <h3>Specifications:</h3>
+    <ul>
+      <li>Audio: Premium sound with 2-way speakers and 24-bit Hi-Fi sound</li>
+      <li>Noise Cancellation: Active Noise Cancellation (ANC) with ambient sound control</li>
+      <li>Battery Life: Up to 18 hours with ANC (5 hours per charge + 13 hours from case)</li>
+      <li>Connectivity: Bluetooth 5.3 with seamless device pairing</li>
+      <li>Water Resistance: IPX7-rated for water and sweat resistance</li>
+      <li>Compatibility: Works with Android and iOS devices</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+     <!-- Cart Section -->
+     <div id="cart" class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Total: £0</p>
+    </div>
+
+
+
+<!-- Loading Screen START-->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+<div id="main-content" style="display: none;"></div>
+<!-- Loading Screen END -->
+ 
+
+  <script src="loading-script.js"></script>
+  <script src="modal.js"></script>
+  <script src="cart.js"></script>
+  <script src="breadcrumbs.js"></script>
+  <script src="search.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work in Progress</title>
+  <style>
+    body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.full-screen img {
+    width: 100vw;  /* Make image fill full width */
+    height: 100vh; /* Make image fill full height */
+    object-fit: cover; /* Ensures the image scales properly */
+}
+
+.home-button {
+    position: absolute;
+    bottom: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #007bff; /* Matches the blue color */
+    color: white; /* White text */
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.home-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+  </style>
+</head>
+<body>
+
+  <div class="full-screen">
+    <img src="Logos/work-in-progress-logo.webp" alt="Work in Progress">
+  </div>
+
+  <a href="index.html" class="home-button">Go to Home</a>
+
+
+
+
+
+  <script src="loading-script.js"></script>
+  <script src="modal.js"></script>
+  <script src="cart.js"></script>
+  <script src="breadcrumbs.js"></script>
+  <script src="search.js"></script>
+  
+</body>
+</html>
