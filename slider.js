@@ -21,26 +21,31 @@ function slide(direction) {
 
 
 function slideCategory(category, direction) {
-    const sliderTrack = document.getElementById(`${category}-slider`);
-    const slides = sliderTrack.querySelectorAll(".category-card");
-    const slideWidth = slides[0].offsetWidth + 16; // Include gap between cards
-    const visibleSlides = Math.floor(sliderTrack.parentElement.offsetWidth / slideWidth);
-  
-    // Current translate value
-    let currentTransform = getComputedStyle(sliderTrack).transform;
-    let currentTranslateX = currentTransform !== "none" ? parseFloat(currentTransform.split(",")[4]) : 0;
-  
-    // Calculate new translate value
-    let newTranslateX = currentTranslateX + direction * slideWidth * visibleSlides;
-  
-    // Limit sliding to prevent showing empty space
-    const maxTranslateX = 0;
-    const minTranslateX = -(slideWidth * (slides.length - visibleSlides));
-  
-    if (newTranslateX > maxTranslateX) newTranslateX = maxTranslateX;
-    if (newTranslateX < minTranslateX) newTranslateX = minTranslateX;
-  
-    // Apply new transform
-    sliderTrack.style.transform = `translateX(${newTranslateX}px)`;
+  const sliderTrack = document.getElementById(`${category}-slider`);
+  const slides = sliderTrack.querySelectorAll(".category-card");
+  const slideWidth = slides[0].offsetWidth + 16; // Include gap between cards
+  const visibleSlides = Math.floor(sliderTrack.parentElement.offsetWidth / slideWidth);
+
+  // Current translate value
+  let currentTransform = window.getComputedStyle(sliderTrack).transform;
+  let currentTranslateX = 0;
+  if (currentTransform !== "none") {
+    const matrixValues = currentTransform.match(/matrix.*\((.+)\)/);
+    if (matrixValues && matrixValues[1]) {
+      currentTranslateX = parseFloat(matrixValues[1].split(", ")[4]);
+    }
   }
-  
+
+  // Calculate new translate value
+  let newTranslateX = currentTranslateX + direction * slideWidth * visibleSlides;
+
+  // Limit sliding
+  const maxTranslateX = 0;
+  const minTranslateX = -(slideWidth * (slides.length - visibleSlides));
+
+  if (newTranslateX > maxTranslateX) newTranslateX = maxTranslateX;
+  if (newTranslateX < minTranslateX) newTranslateX = minTranslateX;
+
+  // Apply new transform
+  sliderTrack.style.transform = `translateX(${newTranslateX}px)`;
+}
